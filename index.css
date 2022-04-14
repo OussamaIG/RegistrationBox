@@ -1,0 +1,280 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: aquamarine;
+}
+.box{
+    background-color: #FFFFFF;
+    height: 500px;
+    width: 500px;
+    border-radius: 23px;
+    position: relative;
+    left: 420px;
+    top: 55px;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 50px;
+}
+.line{
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.circlecon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cir{
+    z-index: 1;
+    background-color: #02A7E7;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 12px;
+    cursor: default;
+}
+.cir.three,.cir.two{
+    border: 1px solid #98ACB4;
+    background-color: #FFFFFF;
+    color: black;
+}
+.ligne{
+    width: 200px;
+    height: 3px;
+    background-color: #98ACB4;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+.ligne2{
+    width: 180px;
+    height: 3px;
+    background-color: #98ACB4;
+    position: absolute;
+    top: 100px;
+    left: 265px;
+}
+.up{
+    color: #02A7E7;
+    margin-bottom: -10px;
+}
+.up.two{
+    opacity: 0;
+}
+.up.three{
+    opacity: 0;
+}
+.txt{
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #546B73;
+}
+#two{
+    margin-top: -15px;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+}
+.input.two{
+    margin-top: 15px;
+}
+.input h2{
+    font-size: 13px;
+    font-weight: bolder;
+    margin-left: 30px;
+}
+.input input{
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #98ACB4;
+    border: 2px solid #E5E5E5;
+    border-radius: 5px;
+    outline-style: none;
+}
+input:focus{
+    border: 2px solid #02A7E7;
+    border-radius: 5px;
+    color: #546B73;
+    font-weight: bold;
+}
+
+.inputs{
+    margin-top: 10px;
+}
+.buttons{
+    margin-top: 30px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #98ACB4;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.button.two{
+    background-color: #02A7E7;
+    border-radius: 20px;
+    width: 80px;
+    height: 25px;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.button.two p{
+    margin-left: 10px;
+}
+.button.two ion-icon{
+   margin-left: 8px;
+}
+.button.one{
+    border-radius: 20px;
+    width: 80px;
+    height: 25px;
+    font-weight: bolder;
+    margin-right: 20px;
+    opacity: 0;
+    cursor: default;
+}
+.button.one ion-icon{
+    margin-right: 8px;
+}
+.inputs.two{
+    display: none;
+}
+.inputs.three{
+    display: none;
+}
+.opacity1{
+    opacity: 1 !important;
+}
+.opacity0{
+    opacity: 0 !important;
+}
+.bluecircle{
+    background-color: #02A7E7 !important;
+    border: 1px solid #02A7E7 !important;
+    color: #FFFFFF !important;
+}
+.blueline{
+    background-color: #02A7E7 !important;
+    color: #FFFFFF !important;
+}
+.blueline{
+    background-color: #02A7E7 !important;
+}
+.visible{
+    display: block !important;
+}
+.hidden{
+    display: none !important;
+}
+.back{
+    opacity: 1 !important;
+    cursor: pointer !important;
+}
+.backhidden{
+    opacity: 0 !important;
+    cursor: default !important;
+}
+.timer{
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+    color: #546B73;
+    font-size: 12px;
+    cursor: pointer;
+}
+.license{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin-left: 30px;
+    margin-top: -5px;
+}
+.license p{
+    margin-top: 14px;
+    
+}
+.license input{
+    height: 13px;
+}
+.not{
+    position: absolute;
+    top: 225px;
+    left: 30px;
+    font-size: 11px;
+    color: red;
+    font-weight: bold;
+    opacity: 0;
+}
+.not2{
+    position: absolute;
+    top: 335px;
+    left: 30px;
+    font-size: 11px;
+    color: red;
+    font-weight: bold;
+    opacity: 0;
+}
+.not3{
+    position: absolute;
+    top: 402px;
+    left: 33px;
+    font-size: 11px;
+    color: red;
+    font-weight: bold;
+    opacity: 0;
+}
+.notnin{
+    position: absolute;
+    top: 222px;
+    left: 30px;
+    font-size: 11px;
+    color: red;
+    font-weight: bold;
+    opacity: 0;
+}
+.notid{
+    position: absolute;
+    top: 305px;
+    left: 30px;
+    font-size: 11px;
+    color: red;
+    font-weight: bold;
+    opacity: 0;
+}
+.notphone{
+    position: absolute;
+    top: 388px;
+    left: 30px;
+    font-size: 11px;
+    color: red;
+    font-weight: bold;
+    opacity: 0;
+}
+.notif{
+    opacity: 1 !important;
+    border: 1px solid red !important;
+}

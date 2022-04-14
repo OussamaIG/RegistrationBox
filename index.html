@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="box" id="box">
+        <h1>Create an account</h1>
+        <div class="line">
+            <div class="circlecon">
+                <div class="up one" :class="upone">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+                <div class="cir one">
+                    <p>1</p>
+                </div>
+                <div class="txt">
+                    <p>Personal</p>
+                    <p id="two">Information</p>
+                </div>
+            </div>
+            <div class="ligne" ></div>
+            <div class="circlecon">
+                <div class="up two" :class="uptwo">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+                <div class="cir two" :class="bluecircle">
+                    <p>2</p>
+                </div>
+                <div class="txt">
+                    <p>Personal</p>
+                    <p id="two">Information</p>
+                </div>
+            </div>
+            <div class="ligne" :class="colorline"></div>
+            <div class="circlecon">
+                <div class="up three" :class="upthree">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+                <div class="cir three" :class="bluecircle2">
+                    <p>3</p>
+                </div>
+                <div class="txt">
+                    <p>Confirm</p>
+                    <p id="two">Registration</p>
+                </div>
+            </div>
+            <div class="ligne2" :class="colorline2"></div>
+        </div>
+        <div class="inputs one" :class="page1">
+            <form action="">
+                <div class="input">
+                    <div class="title">
+                        <h2>First Name</h2>
+                    </div>
+                    <input type="text" placeholder="Mohamed">
+                </div>
+                <div class="input">
+                    <div class="title">
+                        <h2>Second Name</h2>
+                    </div>
+                    <input type="text" placeholder="Djeraoui">
+                </div>
+                <div class="input">
+                    <div class="title">
+                        <h2>Birthday Date</h2>
+                    </div>
+                    <input type="date" placeholder="+213 789 214 222">
+                </div>
+            </form>
+            <div class="buttons">
+                <div class="button one" :class="backbutton" @click="clickBack">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                    <p>Go Back</p>
+                </div>
+                <div class="button two" @click="clickNext">
+                    <p>Next</p>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
+            </div> 
+        </div> 
+        <div class="inputs two" :class="page2">
+           <form action="">
+            <div class="input">
+                <div class="title">
+                    <h2>National Identification Number (NIN)</h2>
+                </div>
+                <input type="text" placeholder="00000000000000" @input="getnin" :class="colorboxnin">
+                <div class="notnin" :class="notifnin">
+                    <p>*This field should not be empty</p>
+                </div>
+            </div>
+            <div class="input two">
+                <div class="title">
+                    <h2>ID Card / Biometric Passport Number</h2>
+                </div>
+                <input type="text" placeholder="0000000" @input="getid" :class="colorboxid">
+                <div class="notid" :class="notifid">
+                    <p>*This field should not be empty</p>
+                </div>
+            </div>
+            <div class="input two">
+                <div class="title">
+                    <h2>Phone Number</h2>
+                </div>
+                <input type="tel" placeholder="+213 789 214 222" @input="getphone" :class="colorboxphone">
+                <div class="notphone" :class="notifphone">
+                    <p>*This field should not be empty</p>
+                </div>
+            </div>
+           </form>
+           <div class="buttons">
+            <div class="button one" :class="backbutton" @click="clickBack">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+                <p>Go Back</p>
+            </div>
+            <div class="button two" @click="clickNext2">
+                <p>Next</p>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </div>
+        </div> 
+        </div> 
+        <div class="inputs three" :class="page3">
+           <form action="">
+            <div class="input">
+                <div class="title">
+                    <h2>Authentification code</h2>
+                </div>
+                <input type="text" placeholder="000000" @input="getcode" :class="colorredcode">
+                <div class="timer">
+                    <p>Resend code</p>
+                </div>
+                <div class="not" :class="notifcode">
+                    <p>*This field should not be empty</p>
+                </div>
+                
+               
+            </div>
+            <div class="input">
+                <div class="title">
+                    <h2>Create Password</h2>
+                </div>
+                <input v-bind:type="type" placeholder="*******" @input="getpassword" :class="colorredpass">
+                <div class="timer" @click="showpassword">
+                    <p>Show Password</p>
+                </div>
+                <div class="not2" :class="notifpass">
+                    <p>*This field should not be empty</p>
+                </div>
+            </div>
+            <div class="license">
+                <input type="checkbox" name="" id="checkbox" @click="check">
+                <p>I have read and agree to the Privacy Policy</p>
+            </div>
+            <div class="not3" :class="notifcheck">
+                <p>*You have to accept the Privacy Policy !</p>
+            </div>
+           </form>
+           <div class="buttons">
+            <div class="button one" :class="backbutton" @click="clickBack">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+                <p>Go Back</p>
+            </div>
+            <div class="button two" @click="finish">
+                <p>Next</p>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </div>
+        </div>
+        </div>  
+       
+    </div>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+    </style>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
